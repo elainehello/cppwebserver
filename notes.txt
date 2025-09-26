@@ -1,8 +1,8 @@
-    # Ubuntu: Install C++ Compiler and CMake
-    1. Update the package list:
-        sudo apt update
-    2. Install CMake:
-        sudo apt install cmake
+# Ubuntu: Install C++ Compiler and CMake
+1. Update the package list:
+    sudo apt update
+2. Install CMake:
+    sudo apt install cmake
 
 # Create a Python Virtual Environment for Conan
 1. Create a virtual environment:

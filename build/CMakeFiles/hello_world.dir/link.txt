@@ -1,1 +1,0 @@
-/usr/bin/c++ -m64 -m64 -Wl,--dependency-file=CMakeFiles/hello_world.dir/link.d CMakeFiles/hello_world.dir/src/main.cpp.o -o hello_world

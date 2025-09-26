@@ -1,1 +1,0 @@
-. "/home/eparra-v/VSCode/cppwebserver/build/conanbuildenv-release-x86_64.sh"
