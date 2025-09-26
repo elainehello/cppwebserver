@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "*.cc": "cpp",
+        "*.hpp": "cpp"
+    },
+    "cmake.configureOnOpen": true
+}
