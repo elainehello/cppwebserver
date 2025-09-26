@@ -1,10 +1,28 @@
-Ubuntu set language C++ compile installation
-    sudo apt update
-    sudo apt install cmake
+    # Ubuntu: Install C++ Compiler and CMake
+    1. Update the package list:
+        sudo apt update
+    2. Install CMake:
+        sudo apt install cmake
 
-
-create a venv in order to use the package required
-    python3 -m venv ~/[nameproject-venv]
-    source ~/[nameproject-venv]/bin/activate
+# Create a Python Virtual Environment for Conan
+1. Create a virtual environment:
+    python3 -m venv ~/cppwebserver-venv
+2. Activate the virtual environment:
+    source ~/cppwebserver-venv/bin/activate
+3. Install Conan:
     pip install conan
+4. Verify Conan installation:
     conan --version
+
+    # Build the Project
+    1. Navigate to the `build` directory:
+        mkdir -p ~/VSCode/cppwebserver/build
+        cd ~/VSCode/cppwebserver/build
+    2. Install dependencies with Conan:
+        conan install .. --build=missing --output-folder=.
+    3. Configure the project with CMake:
+        cmake ..
+    4. Build the project:
+        make
+    5. Run the executable:
+        ./hello_world
