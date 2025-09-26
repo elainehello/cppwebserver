@@ -1,3 +1,10 @@
 Ubuntu set language C++ compile installation
     sudo apt update
     sudo apt install cmake
+
+
+create a venv in order to use the package required
+    python3 -m venv ~/[nameproject-venv]
+    source ~/[nameproject-venv]/bin/activate
+    pip install conan
+    conan --version
