@@ -123,6 +123,12 @@ cppwebserver: /home/eparra-v/.conan2/p/b/boostdbf1873aec332/p/lib/libboost_chron
 cppwebserver: /home/eparra-v/.conan2/p/b/boostdbf1873aec332/p/lib/libboost_atomic.a
 cppwebserver: /home/eparra-v/.conan2/p/b/boostdbf1873aec332/p/lib/libboost_date_time.a
 cppwebserver: /home/eparra-v/.conan2/p/b/boostdbf1873aec332/p/lib/libboost_regex.a
+cppwebserver: /home/eparra-v/.conan2/p/b/libpqbeb642672456c/p/lib/libpqxx.a
+cppwebserver: /home/eparra-v/.conan2/p/b/libpq995291c8e66ce/p/lib/libpq.a
+cppwebserver: /home/eparra-v/.conan2/p/b/libpq995291c8e66ce/p/lib/libpgcommon.a
+cppwebserver: /home/eparra-v/.conan2/p/b/libpq995291c8e66ce/p/lib/libpgcommon_shlib.a
+cppwebserver: /home/eparra-v/.conan2/p/b/libpq995291c8e66ce/p/lib/libpgport.a
+cppwebserver: /home/eparra-v/.conan2/p/b/libpq995291c8e66ce/p/lib/libpgport_shlib.a
 cppwebserver: CMakeFiles/cppwebserver.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/eparra-v/VSCode/cppwebserver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable cppwebserver"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/cppwebserver.dir/link.txt --verbose=$(VERBOSE)

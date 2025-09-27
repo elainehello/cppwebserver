@@ -1,0 +1,2 @@
+Docker compose to build and start the containers:
+    docker-compose up --build

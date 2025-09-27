@@ -1,0 +1,32 @@
+version: "3.8"
+
+services:
+  postgres-db:
+    image: elainehello/my-postgres-db:v1.0
+    container_name: postgres-db
+    environment:
+      POSTGRES_USER: myuser
+      POSTGRES_PASSWORD: mypassword
+      POSTGRES_DB: mydatabase
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  cppwebserver:
+    build:
+      context: .
+    container_name: cppwebserver
+    environment:
+      DB_HOST: postgres-db
+      DB_PORT: 5432
+      DB_NAME: mydatabase
+      DB_USER: myuser
+      DB_PASSWORD: mypassword
+    ports:
+      - "18080:18080"
+    depends_on:
+      - postgres-db
+
+volumes:
+  postgres_data:

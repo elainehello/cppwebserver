@@ -1,0 +1,1 @@
+DRY dont set a new connection each time we send a request
