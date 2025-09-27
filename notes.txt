@@ -3,6 +3,8 @@
     sudo apt update
 2. Install CMake:
     sudo apt install cmake
+3. Install nlohmann-json library:
+    sudo apt-get install nlohmann-json3-dev
 
 # Create a Python Virtual Environment for Conan
 1. Create a virtual environment:
@@ -14,15 +16,15 @@
 4. Verify Conan installation:
     conan --version
 
-    # Build the Project
-    1. Navigate to the `build` directory:
-        mkdir -p ~/VSCode/cppwebserver/build
-        cd ~/VSCode/cppwebserver/build
-    2. Install dependencies with Conan:
-        conan install .. --build=missing --output-folder=.
-    3. Configure the project with CMake:
-        cmake ..
-    4. Build the project:
-        make
-    5. Run the executable:
-        ./hello_world
+# Build the Project
+1. Navigate to the `build` directory:
+    mkdir -p ~/VSCode/cppwebserver/build
+    cd ~/VSCode/cppwebserver/build
+2. Install dependencies with Conan:
+    conan install .. --build=missing --output-folder=.
+3. Configure the project with CMake:
+    cmake .. -DCMAKE_BUILD_TYPE=Release
+4. Build the project:
+    make
+5. Run the executable:
+    ./cppwebserver
