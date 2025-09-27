@@ -1,0 +1,3 @@
+/home/eparra-v/VSCode/cppwebserver/build/CMakeFiles/cppwebserver.dir
+/home/eparra-v/VSCode/cppwebserver/build/CMakeFiles/edit_cache.dir
+/home/eparra-v/VSCode/cppwebserver/build/CMakeFiles/rebuild_cache.dir

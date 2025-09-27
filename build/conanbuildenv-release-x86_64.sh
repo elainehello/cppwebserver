@@ -1,4 +1,4 @@
-script_folder="/home/eparra-v/VSCode/cppwebserver/build/build/Release/generators"
+script_folder="/home/eparra-v/VSCode/cppwebserver/build"
 echo "echo Restoring environment" > "$script_folder/deactivate_conanbuildenv-release-x86_64.sh"
 for v in 
 do

@@ -1,7 +1,16 @@
-#include <iostream>
+#include <crow.h>
+#include "server.hpp"
 
 int main()
 {
-    std::cout << "hello world!" << std::endl;
-    return (0);
+    crow::SimpleApp app;
+    
+
+    // Set up routes
+    setup_routes(app);
+
+    // Start the server
+    app.bindaddr("127.0.0.1").port(18080).multithreaded().run();
+
+    return(0);
 }

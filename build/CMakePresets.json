@@ -18,8 +18,8 @@
                 "CMAKE_POLICY_DEFAULT_CMP0091": "NEW",
                 "CMAKE_BUILD_TYPE": "Release"
             },
-            "toolchainFile": "generators/conan_toolchain.cmake",
-            "binaryDir": "/home/eparra-v/VSCode/cppwebserver/build/build/Release"
+            "toolchainFile": "conan_toolchain.cmake",
+            "binaryDir": "/home/eparra-v/VSCode/cppwebserver/build"
         }
     ],
     "buildPresets": [
