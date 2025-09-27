@@ -5,5 +5,6 @@ find_package(Crow)
 find_package(nlohmann_json)
 find_package(spdlog)
 find_package(cpprestsdk)
+find_package(libpqxx)
 
-set(CONANDEPS_LEGACY  Crow::Crow  nlohmann_json::nlohmann_json  spdlog::spdlog  cpprestsdk::cpprestsdk )
+set(CONANDEPS_LEGACY  Crow::Crow  nlohmann_json::nlohmann_json  spdlog::spdlog  cpprestsdk::cpprestsdk  libpqxx::pqxx )

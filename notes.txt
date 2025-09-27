@@ -27,4 +27,11 @@
 4. Build the project:
     make
 5. Run the executable:
-    ./cppwebserver
+    ./
+    
+Command update CMake to newer version
+sudo apt update
+sudo apt install -y wget
+wget https://github.com/Kitware/CMake/releases/download/v3.27.7/cmake-3.27.7-linux-x86_64.sh
+sudo bash cmake-3.27.7-linux-x86_64.sh --skip-license --prefix=/usr/local
+

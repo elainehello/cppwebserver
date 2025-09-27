@@ -10,15 +10,10 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/eparra-v/VSCode/cppwebserver/src/main.cpp" "CMakeFiles/cppwebserver.dir/src/main.cpp.o" "gcc" "CMakeFiles/cppwebserver.dir/src/main.cpp.o.d"
   "/home/eparra-v/VSCode/cppwebserver/src/server.cpp" "CMakeFiles/cppwebserver.dir/src/server.cpp.o" "gcc" "CMakeFiles/cppwebserver.dir/src/server.cpp.o.d"
-  "" "cppwebserver" "gcc" "CMakeFiles/cppwebserver.dir/link.d"
   )
 
 # Targets to which this target links which contain Fortran sources.
 set(CMAKE_Fortran_TARGET_LINKED_INFO_FILES
-  )
-
-# Targets to which this target links which contain Fortran sources.
-set(CMAKE_Fortran_TARGET_FORWARD_LINKED_INFO_FILES
   )
 
 # Fortran module output directory.
