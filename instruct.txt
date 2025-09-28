@@ -1,0 +1,101 @@
+Instructions to Build and Run cppwebserver with Docker Compose
+==============================================================
+
+1. **Build and Push the Database Docker Image**
+   a. Build the PostgreSQL database Docker image:
+      ```
+      docker build -t elainehello/my-postgres-db:v1.0 .
+      ```
+   b. Log in to Docker Hub:
+      ```
+      docker login
+      ```
+      Enter your Docker Hub username and password when prompted.
+   c. Push the database image to Docker Hub:
+      ```
+      docker push elainehello/my-postgres-db:v1.0
+      ```
+
+2. **Set Up Docker Compose**
+   a. Ensure the `docker-compose.yml` file is configured correctly. It should define two services:
+      - `postgres-db`: The PostgreSQL database service using the `elainehello/my-postgres-db:v1.0` image.
+      - `cppwebserver`: The C++ web server service.
+   b. Verify the `docker-compose.yml` file matches the following structure:
+      ```
+      version: "3.8"
+
+      services:
+        postgres-db:
+          image: elainehello/my-postgres-db:v1.0
+          container_name: postgres-db
+          environment:
+            POSTGRES_USER: myuser
+            POSTGRES_PASSWORD: mypassword
+            POSTGRES_DB: mydatabase
+          ports:
+            - "5432:5432"
+          volumes:
+            - postgres_data:/var/lib/postgresql/data
+
+        cppwebserver:
+          build:
+            context: .
+          container_name: cppwebserver
+          environment:
+            DB_HOST: postgres-db
+            DB_PORT: 5432
+            DB_NAME: mydatabase
+            DB_USER: myuser
+            DB_PASSWORD: mypassword
+          ports:
+            - "18080:18080"
+          depends_on:
+            - postgres-db
+
+      volumes:
+        postgres_data:
+      ```
+
+3. **Build and Run the Services**
+   a. Build the Docker images:
+      ```
+      docker compose build --no-cache
+      ```
+   b. Start the services:
+      ```
+      docker compose up -d
+      ```
+   c. Verify the services are running:
+      ```
+      docker compose ps
+      ```
+
+4. **Test the Server**
+   a. Test the root endpoint:
+      ```
+      curl -v http://127.0.0.1:18080/
+      ```
+      Expected response:
+      ```
+      Welcome to the cppwebserver!
+      ```
+   b. Test the `/health` endpoint (if implemented):
+      ```
+      curl -v http://127.0.0.1:18080/health
+      ```
+      Expected response:
+      ```
+      OK
+      ```
+
+5. **Logs and Debugging**
+   a. View logs for debugging:
+      ```
+      docker compose logs
+      ```
+   b. Stop the services:
+      ```
+      docker compose down
+      ```
+
+Follow these steps to successfully build, push, and run the `cppwebserver` and its database using Docker Compose.
