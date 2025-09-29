@@ -14,8 +14,7 @@ services:
       - postgres_data:/var/lib/postgresql/data
 
   cppwebserver:
-    build:
-      context: .
+    image: elainehello/cppwebserver:v1.0
     container_name: cppwebserver
     environment:
       DB_HOST: postgres-db
