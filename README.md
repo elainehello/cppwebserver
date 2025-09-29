@@ -1,5 +1,3 @@
-Here’s an improved **Markdown version** of your README with proper formatting, headings, code blocks, and lists:
-
 ````markdown
 # cppwebserver
 
