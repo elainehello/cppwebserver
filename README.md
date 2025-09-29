@@ -102,5 +102,3 @@ http://127.0.0.1:18080/users/1
 ```bash
 curl -v -X DELETE http://127.0.0.1:18080/users/1
 ```
-
-```
